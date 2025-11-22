@@ -10,7 +10,7 @@ export default function EmailSent() {
   const router = useRouter();
 
   const handleComplete = (code: string) => {
-    router.push("/(root)/(tabs)/home");
+    router.push("/(root)/(tabs)");
   };
 
   return (

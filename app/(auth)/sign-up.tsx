@@ -57,7 +57,7 @@ export default function SignUp() {
         <CustomButton
           title="Continue with Google"
           onPress={() => {
-            /* TODO: wire up your Google OAuth */
+            router.push("/(root)/(tabs)");
           }}
           className={
             "bg-transparent border border-gray-300 flex-row items-center justify-center p-4 rounded-lg w-full"
