@@ -30,10 +30,10 @@ const Home = () => {
         ref={swiperRef}
         loop={false}
         dot={
-          <View className="w-[32px] h-[4px] mx-1 bg-primary/20 rounded-full" />
+          <View className="w-[32px] h-[4px] mx-1 bg-gray-300 rounded-full" />
         }
         activeDot={
-          <View className="w-[32px] h-[4px] mx-1 bg-emerald-500 rounded-full" />
+          <View className="w-[32px] h-[4px] mx-1 bg-gray-800 rounded-full" />
         }
         onIndexChanged={(index) => setActiveIndex(index)}
         bounces={true}

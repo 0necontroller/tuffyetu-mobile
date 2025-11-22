@@ -13,8 +13,8 @@ module.exports = {
         JakartaSemiBold: ["Jakarta-SemiBold", "sans-serif"],
       },
       colors: {
-        primary: "#10b981",
-        secondary: "#3e4a3d",
+        primary: "#D4FF00",
+        turfyetu: "#D4FF00",
         success: {
           100: "#F0FFF4",
           200: "#C6F6D5",
