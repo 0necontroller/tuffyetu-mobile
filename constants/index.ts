@@ -70,29 +70,28 @@ export const images = {
   check,
   noResult,
   message,
-  emailSent
+  emailSent,
 };
 
 export const onboarding = [
   {
     id: 1,
-    title: "Ease life around campus!",
-    description:
-      "Simple, fast and reliable way to get around campus.\n Let's get started!",
+    title: "Find Players and Coaches Near You!",
+    description: "Simple, fast and convenient.\n Let's get started!",
     image: images.onboarding1,
   },
   {
     id: 2,
-    title: "Find important services",
+    title: "Book Venues to Play with Friends",
     description:
-      "Find important services around campus that simplify your life.",
+      "Find and book the best venues to enjoy your game with friends.",
     image: images.onboarding2,
   },
   {
     id: 3,
-    title: "Explore events and activities",
+    title: "Easily Discover Competitions and Events",
     description:
-      "Easily find events and activities happening around campus.",
+      "Stay updated with the latest sporting competitions and events happening around you.",
     image: images.onboarding3,
   },
 ];
