@@ -5,7 +5,6 @@ import { ThemedText } from "@/components/ui/text";
 import { icons, images } from "@/constants";
 import InputField from "@/components/ui/input";
 import CustomButton from "@/components/ui/button";
-import Octicons from "@expo/vector-icons/Octicons";
 import { Text } from "react-native";
 import { useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -110,8 +109,8 @@ export default function FavouriteSport() {
 
       <View className="p-4">
         <CustomButton
-          title="MAKE MY DEBUT"
-          onPress={() => router.replace("/(root)/home" as any)}
+          title="LET'S GO"
+          onPress={() => router.replace("/(root)/(tabs)")}
           className="p-4 shadow-lg"
         />
       </View>
