@@ -45,7 +45,7 @@ const InputField = ({
             )}
             <TextInput
               style={{ borderWidth: 0 }}
-              className={`font-Jakarta placeholder:font-medium mb-0.5 text-[15px] flex-1 ${inputStyle} text-left ${
+              className={`font-JakartaMedium mb-0.5 text-[13px] flex-1 ${inputStyle} text-left ${
                 colorScheme == "light" ? "text-gray-500" : "text-gray-200"
               }`}
               secureTextEntry={secureTextEntry}

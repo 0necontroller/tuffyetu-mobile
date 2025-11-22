@@ -63,7 +63,7 @@ export default function SignUp() {
             "bg-transparent border border-gray-300 flex-row items-center justify-center p-4 rounded-lg w-full"
           }
           textClassName={
-            "text-black dark:text-white ml-2 font-JakartaBold text-base"
+            "text-black dark:text-white ml-2 font-JakartaSemiBold text-base"
           }
           IconLeft={() => <Image source={icons.google} className="w-6 h-6" />}
         />

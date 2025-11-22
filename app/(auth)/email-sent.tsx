@@ -4,20 +4,20 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import AppleOTPInput from "../../components/ui/opt-input";
 import { ThemedText } from "@/components/ui/text";
 import { Link, useRouter } from "expo-router";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import Entypo from "@expo/vector-icons/Entypo";
 
 export default function EmailSent() {
   const router = useRouter();
 
   const handleComplete = (code: string) => {
-    router.push("/(root)/(tabs)");
+    router.push("/(auth)/favourite-sport");
   };
 
   return (
-    <SafeAreaView className="gap-6 px-4 h-full bg-white">
-      <TouchableOpacity className="bg-gray-100 h-10 w-10 flex items-center justify-center rounded-full p-1">
+    <SafeAreaView className="gap-6 py-2 px-4 h-full bg-white">
+      <TouchableOpacity className="p-0.5">
         <Link dismissTo href="/(auth)/sign-up">
-          <Ionicons name="arrow-back" size={24} color="black" />
+          <Entypo name="chevron-thin-left" size={20} color="black" />
         </Link>
       </TouchableOpacity>
 
