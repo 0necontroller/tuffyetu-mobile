@@ -1,88 +1,75 @@
-import { useState } from 'react'
-import { Link, router } from 'expo-router'
-import { icons } from '@/constants'
-import InputField from '@/components/ui/input'
-import CustomButton from '@/components/ui/button'
-import Octicons from '@expo/vector-icons/Octicons'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import {
-  View,
-  Text,
-  ScrollView,
-  useColorScheme,
-  TouchableOpacity,
-} from 'react-native'
+import { useState } from "react";
+import { router } from "expo-router";
+import { icons, images } from "@/constants";
+import InputField from "@/components/ui/input";
+import CustomButton from "@/components/ui/button";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Text, ScrollView, useColorScheme, Image } from "react-native";
+import { ThemedText } from "@/components/ui/text";
 
 export default function SignUp() {
-  const colorScheme = useColorScheme()
+  const colorScheme = useColorScheme();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    password: '',
-  })
+    email: "",
+  });
   return (
-    <ScrollView className='flex-1'>
-      <SafeAreaView className='pt-6 px-4'>
-        <View className='flex gap-4'>
-          <TouchableOpacity
-            onPress={() => {
-              router.replace('/welcome')
-            }}
-            className='flex items-center justify-center bg-gray-200 w-[40px] h-[40px] rounded-full dark:bg-primary/20'
-          >
-            <Octicons
-              name='chevron-left'
-              size={25}
-              color={colorScheme == 'dark' ? 'gray' : 'black'}
-            />
-          </TouchableOpacity>
-
-          <Text className='dark:text-white font-bold text-3xl'>
-            Create Account
-          </Text>
+    <ScrollView className="flex-1 bg-white dark:bg-black">
+      <SafeAreaView className="pt-10 px-4 h-screen items-center justify-center">
+        <View className="items-center">
+          {/* logo placeholder */}
+          <Image
+            source={images.turfYetuLogo}
+            className="w-[200px]"
+            resizeMode="contain"
+          />
         </View>
 
-        <View className='mt-6'>
+        <View className="w-full px-2 mt-4">
+          <ThemedText type="title" className="mx-auto mb-4">
+            Log in or sign up
+          </ThemedText>
           <InputField
-            label='Name'
-            placeholder='Enter name'
-            icon={icons.person}
-            value={form.name}
-            colorScheme={colorScheme ?? 'light'}
-            onChangeText={(value) => setForm({ ...form, name: value })}
-          />
-          <InputField
-            label='Email'
-            placeholder='Enter email'
+            placeholder="Enter email"
             icon={icons.email}
-            textContentType='emailAddress'
+            textContentType="emailAddress"
             value={form.email}
             onChangeText={(value) => setForm({ ...form, email: value })}
-            colorScheme={colorScheme ?? 'light'}
-            keyboardType='email-address'
-          />
-          <InputField
-            label='Password'
-            placeholder='Enter password'
-            icon={icons.lock}
-            secureTextEntry={true}
-            textContentType='password'
-            value={form.password}
-            colorScheme={colorScheme ?? 'light'}
-            onChangeText={(value) => setForm({ ...form, password: value })}
+            colorScheme={colorScheme ?? "light"}
+            keyboardType="email-address"
+            className="w-full"
+            autoCapitalize="none"
+            autoCorrect={false}
+            clearButtonMode="while-editing"
           />
 
-          <View className='mt-4 flex flex-row'>
-            <Text className='text-sm text-center font-JakartaMedium dark:text-gray-200'>
-              Already have an account?&nbsp;
-              <Link href='/sign-in' className='font-JakartaSemiBold'>
-                Login
-              </Link>
-            </Text>
+          <CustomButton
+            title="Continue"
+            onPress={() => router.push("/email-sent")}
+            className="mt-2 w-full rounded-lg"
+            textClassName="text-white font-JakartaSemiBold"
+          />
+
+          <View className="flex flex-row items-center justify-center my-4">
+            <View className="h-[1px] bg-gray-200 flex-1 mx-2" />
+            <Text className="text-gray-400">or</Text>
+            <View className="h-[1px] bg-gray-200 flex-1 mx-2" />
           </View>
-          <CustomButton title='Sign Up' onPress={() =>router.push("/about-you")} className='mt-8' />
+
+          <CustomButton
+            title="Continue with Google"
+            onPress={() => {
+              /* TODO: wire up your Google OAuth */
+            }}
+            className={
+              "bg-transparent border border-gray-300 flex-row items-center justify-center p-4 rounded-lg w-full"
+            }
+            textClassName={
+              "text-black dark:text-white ml-2 font-JakartaBold text-base"
+            }
+            IconLeft={() => <Image source={icons.google} className="w-6 h-6" />}
+          />
         </View>
       </SafeAreaView>
     </ScrollView>
-  )
+  );
 }

@@ -32,6 +32,7 @@ import onboarding2 from "@/assets/images/onboarding2.png";
 import onboarding3 from "@/assets/images/onboarding3.png";
 import signUpCar from "@/assets/images/signup-car.png";
 import emailSent from "@/assets/images/email-sent.png";
+import turfYetuLogo from "@/assets/images/turffyetu-logo.png";
 
 export const icons = {
   arrowDown,
@@ -71,6 +72,7 @@ export const images = {
   noResult,
   message,
   emailSent,
+  turfYetuLogo,
 };
 
 export const onboarding = [
